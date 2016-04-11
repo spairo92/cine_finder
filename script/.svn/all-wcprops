@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/cine-finder/!svn/ver/62/trunk/src/script
+END
+filmViewFunctions.js
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/cine-finder/!svn/ver/60/trunk/src/script/filmViewFunctions.js
+END
+searchFunctions.js
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/cine-finder/!svn/ver/60/trunk/src/script/searchFunctions.js
+END
+sessionsInitialization.js
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/cine-finder/!svn/ver/62/trunk/src/script/sessionsInitialization.js
+END
+indexFunctions.js
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/cine-finder/!svn/ver/62/trunk/src/script/indexFunctions.js
+END
+utils.js
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/cine-finder/!svn/ver/62/trunk/src/script/utils.js
+END
+cinemaFunctions.js
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/cine-finder/!svn/ver/62/trunk/src/script/cinemaFunctions.js
+END
+inclusions.js
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/cine-finder/!svn/ver/62/trunk/src/script/inclusions.js
+END
+plotInitialization.js
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/cine-finder/!svn/ver/18/trunk/src/script/plotInitialization.js
+END
+globalInitialization.js
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/cine-finder/!svn/ver/53/trunk/src/script/globalInitialization.js
+END
+orderTicketFunctions.js
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/cine-finder/!svn/ver/60/trunk/src/script/orderTicketFunctions.js
+END

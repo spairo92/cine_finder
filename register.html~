@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <title>Register User</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	<!-- bootstrap framework -->
+	<link rel="stylesheet" href="src/lib/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="src/lib/bootstrap/dist/css/bootstrap-theme.min.css">
+	<script type="text/javascript" src="/src/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+	
+	<!-- jQuery -->
+	<script type="text/javascript" src="src/lib/jquery/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="src/lib/jquery/jquery-migrate-1.2.1.min.js"></script>
+	
+	<script type="text/javascript">
+		    //Hiding the error message labels
+    //$("#errorMessageUsername,#errorMessagePassword,#errorMessageEmail,#errorMessageName,#errorMessageLastName,#errorMessageMobile,#errorMessageAddress,#errorMessageLocation,#errorMessagePostalCode").hide();
+    //Add the button functions to display the comment
+	$(document).ready(function(){
+		$("#buttonSubmit").click(function(){
+    	var fieldsNotEmpty = new Boolean(true);
+
+			//We remove error class and error labels in case of consecutive errors
+			$("#usernameGroup").removeClass("has-error");
+			$("#passwordGroup").removeClass("has-error");
+			$("#emailGroup").removeClass("has-error");
+			$("#firstNameGroup").removeClass("has-error");
+			$("#lastNameGroup").removeClass("has-error");
+			$("#mobileGroup").removeClass("has-error");
+			$("#addressGroup").removeClass("has-error");
+			$("#locationGroup").removeClass("has-error");
+			$("#postalCodeGroup").removeClass("has-error");
+			//$("#errorMessageUsername,#errorMessagePassword,#errorMessageEmail,#errorMessageName,#errorMessageLastName,#errorMessageMobile,#errorMessageAddress,#errorMessageLocation,#errorMessagePostalCode").hide();
+			
+
+			
+			//We check the fields
+			if ($("#inputUsername").val() == "") {
+				//We show the error message label
+				//$("#errorMessageUsername").show();
+				//And we had the error class
+				$("#usernameGroup").addClass("has-error");
+				fieldsNotEmpty = false;
+			} 
+			if ($("#inputPassword3").val().length == 0) {
+				$("#passwordGroup").addClass("has-error");
+				fieldsNotEmpty = false;
+			}
+			if ($("#inputEmail3").val().length == 0) {
+				$("#emailGroup").addClass("has-error");
+				fieldsNotEmpty = false;
+			}
+			if ($("#inputName").val().length == 0) {
+				$("#firstNameGroup").addClass("has-error");
+				fieldsNotEmpty = false;
+			}
+			if ($("#inputLastName").val().length == 0) {
+				$("#lastNameGroup").addClass("has-error");
+				fieldsNotEmpty = false;
+			}
+			if ($("#inputMobile").val().length == 0) {
+				$("#mobileGroup").addClass("has-error");
+				fieldsNotEmpty = false;
+			}
+			if ($("#inputAddress").val().length == 0) {
+				$("#addressGroup").addClass("has-error");
+				fieldsNotEmpty = false;
+			}
+			if ($("#inputLocation").val().length == 0) {
+				$("#locationGroup").addClass("has-error");
+				fieldsNotEmpty = false;
+			}
+			if ($("#inputPostalCode").val().length == 0) {
+				$("#postalCodeGroup").addClass("has-error");
+				fieldsNotEmpty = false;
+			}
+	
+			if (fieldsNotEmpty) {	
+				//We create a new comment object
+				var comment = new Comment($("#inputUsername").val(),$("#article").val(),new Date());
+				
+				//We display it
+				displayOneComment(comment);
+				
+				//Clear the input fields
+				$("#inputUsername,#inputPassword3,#inputEmail3,#inputName,#inputLastName,#inputMobile,#inputAddress,#inputLocation,#inputPostalCode").val("");
+			}
+		});
+	
+	});
+    
+	</script>
+  </head>
+
+	<body>
+		<form class="form-horizontal" role="form">
+		  <div id="usernameGroup" class="form-group">
+			<label for="inputUsername" class="col-sm-2 control-label">Username</label>
+			<div class="col-sm-10">
+			  <input type="username" class="form-control" id="inputUsername" placeholder="Enter your Username">
+			</div>
+		  </div>
+		  <div id="passwordGroup" class="form-group">
+			<label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+			<div class="col-sm-10">
+			  <input type="password" class="form-control" id="inputPassword3" placeholder="Enter your Password">
+			</div>
+		  </div>
+		  <div id="emailGroup" class="form-group">
+			<label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+			<div class="col-sm-10">
+			  <input type="email" class="form-control" id="inputEmail3" placeholder="Enter your Email">
+			</div>
+		  </div>
+		  <div id="firstNameGroup" class="form-group">
+			<label for="inputName" class="col-sm-2 control-label">First Name</label>
+			<div class="col-sm-10">
+			  <input type="name" class="form-control" id="inputName" placeholder="Enter your First Name">
+			</div>
+		  </div>
+		  <div id="lastNameGroup" class="form-group">
+			<label for="inputLastName" class="col-sm-2 control-label">Last Name</label>
+			<div class="col-sm-10">
+			  <input type="lastName" class="form-control" id="inputLastName" placeholder="Enter your Last Name">
+			</div>
+		  </div>
+		  <div id="mobileGroup" class="form-group">
+			<label for="inputMobile" class="col-sm-2 control-label">Mobile</label>
+			<div class="col-sm-10">
+			  <input type="mobile" class="form-control" id="inputMobile" placeholder="Enter your Mobile Number">
+			</div>
+		  </div>
+		  <div id="addressGroup" class="form-group">
+			<label for="inputAddress" class="col-sm-2 control-label">Address</label>
+			<div class="col-sm-10">
+			  <input type="address" class="form-control" id="inputAddress" placeholder="Enter your Address">
+			</div>
+		  </div>
+		  <div id="locationGroup" class="form-group">
+			<label for="inputLocation" class="col-sm-2 control-label">Location (Country)</label>
+			<div class="col-sm-10">
+			  <input type="location" class="form-control" id="inputLocation" placeholder="Enter your Location">
+			</div>
+		  </div>
+		  <div id="postalCodeGroup" class="form-group">
+			<label for="inputPostalCode" class="col-sm-2 control-label">Postal Code</label>
+			<div class="col-sm-10">
+			  <input type="postalCode" class="form-control" id="inputPostalCode" placeholder="Enter your Postal Code">
+			</div>
+		  </div>
+		  
+		  <div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+			  <div class="checkbox">
+				<label>
+				  <input type="checkbox"> I accept the licensing terms and conditions
+				</label>
+			  </div>
+			</div>
+		  </div>
+		  <div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+			  <input type="button" id="buttonSubmit" class="btn btn-default" value="Register" />
+			  <input type="reset" class="btn btn-default" value="Reset" />
+			</div>
+		  </div>
+		</form>
+	</body>
+</html>

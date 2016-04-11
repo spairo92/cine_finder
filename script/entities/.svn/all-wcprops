@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/cine-finder/!svn/ver/53/trunk/src/script/entities
+END
+Sessions.js
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/cine-finder/!svn/ver/46/trunk/src/script/entities/Sessions.js
+END
+Film.js
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/cine-finder/!svn/ver/18/trunk/src/script/entities/Film.js
+END
+Cinema.js
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/cine-finder/!svn/ver/45/trunk/src/script/entities/Cinema.js
+END
+Room.js
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/cine-finder/!svn/ver/53/trunk/src/script/entities/Room.js
+END
+Seat.js
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/cine-finder/!svn/ver/53/trunk/src/script/entities/Seat.js
+END
+User.js
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/cine-finder/!svn/ver/53/trunk/src/script/entities/User.js
+END
+Comment.js
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/cine-finder/!svn/ver/31/trunk/src/script/entities/Comment.js
+END

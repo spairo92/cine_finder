@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+
+	<title>CineFinder - Movies</title>
+
+	<!-- content-type, encoding and viewport (to enable the responsiveness of the page) -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- image next to the title -->
+	<link rel="shortcut icon" href="images/logo_cineFinder.jpg" type="image/x-icon">
+
+	<!-- personnal common stylesheet -->
+	<link rel="stylesheet" type="text/css" href="style/common_style.css">
+
+	<!-- jQuery -->
+	<script type="text/javascript" src="lib/jquery/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="lib/jquery/jquery-migrate-1.2.1.min.js"></script>
+
+	<!-- jQuery UI -->
+	<script type="text/javascript" src="lib/jquery-ui/jquery-ui-1.10.3.min.js"></script>
+	<link rel="stylesheet" href="lib/jquery-ui/jquery-ui-1.10.3.css">
+
+	<!-- bootstrap framework -->
+	<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-theme.min.css">
+	<script type="text/javascript" src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+	<!-- inclusion of the header and footer -->
+	<script type="text/javascript">
+	// This parameter allows to know in which section we are
+	var section = "allMovies";
+	</script>
+	<script type="text/javascript" src="script/inclusions.js"></script>
+
+	<script type="text/javascript" src="script/entities/Cinema.js"></script>
+	<script type="text/javascript" src="script/entities/Seat.js"></script>
+	<script type="text/javascript" src="script/entities/Room.js"></script>
+	<script type="text/javascript" src="script/entities/Photo.js"></script>
+	<script type="text/javascript" src="script/entities/Sessions.js"></script>
+	<script type="text/javascript" src="script/entities/Comment.js"></script>
+	<script type="text/javascript" src="script/entities/Film.js"></script>
+	<script type="text/javascript" src="script/utils.js"></script>
+	<script type="text/javascript" src="script/plotInitialization.js"></script>
+	<script type="text/javascript" src="script/globalInitialization.js"></script>
+	<script type="text/javascript" src="script/sessionsInitialization.js"></script>
+	<script type="text/javascript" src="script/allFilmsView.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			displayFilms(allFilms, "#allMoviesBody #allFilmsDiv", true);
+
+			$( "#rapidSearch" ).autocomplete({source: allFilmsCinemasDirectorsGenres, delay:100});
+		});
+	</script>
+
+</head>
+<body id="allMoviesBody">
+
+	<div id="wrap">
+		<!-- header included by the jQuery script inclusions.js -->
+		<header id="header"></header>
+
+		<section id="content" class="container">
+			
+			<div class=jumbotron>
+				<h1 class="sectionTitle">Movies on show</h1>
+			</div>
+			<div id="allFilmsDiv">
+			</div>
+
+		</section>
+		<br/>
+	</div>
+
+	<!-- footer included by the jQuery script inclusions.js -->
+	<footer id="footer"></footer>
+
+</body>
+</html>

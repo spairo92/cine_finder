@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+
+	<title>CineFinder - Film review</title>
+
+	<!-- content-type, encoding and viewport (to enable the responsiveness of the page) -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- image next to the title -->
+	<link rel="shortcut icon" href="images/logo_cineFinder.jpg" type="image/x-icon">
+
+	<!-- personnal stylesheets -->
+	<link rel="stylesheet" type="text/css" href="style/common_style.css">
+
+	<!-- jQuery -->
+	<script type="text/javascript" src="lib/jquery/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="lib/jquery/jquery-migrate-1.2.1.min.js"></script>
+
+	<!-- jQuery UI -->
+	<script type="text/javascript" src="lib/jquery-ui/jquery-ui-1.10.3.min.js"></script>
+	<link rel="stylesheet" href="lib/jquery-ui/jquery-ui-1.10.3.css">
+
+	<!-- bootstrap framework -->
+	<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-theme.min.css">
+	<script type="text/javascript" src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+	<!-- inclusion of the header and footer -->
+	<script type="text/javascript">
+	// This parameter allows to know in which section we are
+	var section = "searchBy";
+	</script>
+	<script type="text/javascript" src="script/inclusions.js"></script>
+
+	<!-- javascript scripts and functions -->
+	<script type="text/javascript" src="script/entities/Cinema.js"></script>
+	<script type="text/javascript" src="script/entities/Seat.js"></script>
+	<script type="text/javascript" src="script/entities/Room.js"></script>
+	<script type="text/javascript" src="script/entities/Photo.js"></script>
+	<script type="text/javascript" src="script/entities/Comment.js"></script>
+	<script type="text/javascript" src="script/entities/Film.js"></script>
+	<script type="text/javascript" src="script/globalInitialization.js"></script>
+	<script type="text/javascript" src="script/searchFunctions.js"></script>
+
+	<!-- Initialization of search page -->
+	<script type="text/javascript">
+	$(document).ready(function() { 
+		var param = getInitParam();
+		if (param == "genre")
+			displaySearchGenreSection();
+		else if (param == "director")
+			displaySearchDirectorSection();
+		else
+			displaySearchNameSection();
+
+		//Auto-completion
+		$( "#searchBarName" ).autocomplete({source: allFilmNames});
+		$( "#searchBarDirector" ).autocomplete({source: allDirectors});
+	});
+	</script>
+
+</head>

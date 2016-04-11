@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/cine-finder/!svn/ver/62/trunk/src
+END
+all_movies.html
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/cine-finder/!svn/ver/52/trunk/src/all_movies.html
+END
+orderTicket.html
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/cine-finder/!svn/ver/54/trunk/src/orderTicket.html
+END
+viewFilm.html
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/cine-finder/!svn/ver/52/trunk/src/viewFilm.html
+END
+search.html
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/cine-finder/!svn/ver/52/trunk/src/search.html
+END
+all_cinemas.html
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/cine-finder/!svn/ver/52/trunk/src/all_cinemas.html
+END
+index.html
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/cine-finder/!svn/ver/62/trunk/src/index.html
+END
+viewCinema.html
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/cine-finder/!svn/ver/52/trunk/src/viewCinema.html
+END
